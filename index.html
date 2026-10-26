@@ -147,8 +147,11 @@ sup.idx{font-family:var(--mono);font-size:.22em;font-weight:400;vertical-align:t
 .marquee{margin-top:12px;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .marquee__track{display:flex;gap:8px;width:max-content;animation:run 60s linear infinite}
 .marquee:hover .marquee__track{animation-play-state:paused}
-.marquee__track span{flex:none;height:64px;padding:0 26px;border-radius:12px;background:var(--tile);display:grid;place-items:center;font-size:13px;font-weight:500;letter-spacing:.02em;text-transform:uppercase;color:#5E5E5A;transition:color .25s,background .25s}
-.marquee__track span:hover{color:var(--red);background:var(--tile-2)}
+.marquee__track span{flex:none;width:184px;height:92px;border-radius:12px;background:var(--tile);display:grid;place-items:center;transition:background .3s}
+.marquee__track img{max-width:124px;max-height:58px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.1);opacity:.7;transition:filter .35s,opacity .35s}
+.marquee__track span:hover{background:var(--tile-2)}
+.marquee__track span:hover img{filter:none;opacity:1}
+.marquee__track .txt{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#77776f}
 @keyframes run{to{transform:translateX(-50%)}}
 
 /* ---------- секции ---------- */
@@ -449,10 +452,10 @@ body.lock{overflow:hidden}
 
 <div class="partners wrap rv" id="partners">
   <span class="mono">Партнёры</span>
-  <!-- названия с текущего сайта; при наличии логотипов в векторе заменить на svg -->
+  <!-- логотипы из открытых источников; Бел-Морис — текстом, нужен официальный логотип -->
   <div class="marquee">
     <div class="marquee__track" id="track">
-      <span>Могилевский мясокомбинат</span><span>Брестский мясокомбинат</span><span>Борисовский мясокомбинат №1</span><span>Славянский мясокомбинат</span><span>Славянские продукты</span><span>Пуховичи мясопродукт</span><span>Агрокомбинат «Снов»</span><span>Агрокомбинат «Скидельский»</span><span>Грандъ продукт</span><span>Бел-Морис</span><span>Серволюкс</span><span>Инко-Фуд</span><span>Ганна</span><span>Мясанат</span>
+      <span><img src="img/partners/mogilev.jpg" alt="Могилевский мясокомбинат" loading="lazy"></span><span><img src="img/partners/brest.png" alt="Брестский мясокомбинат" loading="lazy"></span><span><img src="img/partners/borisov.jpg" alt="Борисовский мясокомбинат №1" loading="lazy"></span><span><img src="img/partners/grodno.jpg" alt="Гродненский мясокомбинат" loading="lazy"></span><span><img src="img/partners/slavyansky.jpg" alt="Славянский мясокомбинат" loading="lazy"></span><span><img src="img/partners/slavprodukty.svg" alt="Славянские продукты" loading="lazy"></span><span><img src="img/partners/puhovichi.png" alt="Пуховичи мясопродукт" loading="lazy"></span><span><img src="img/partners/snov.jpg" alt="Агрокомбинат «Снов»" loading="lazy"></span><span><img src="img/partners/skidel.jpg" alt="Агрокомбинат «Скидельский»" loading="lazy"></span><span><img src="img/partners/grand.png" alt="Грандъ продукт" loading="lazy"></span><span><img src="img/partners/servolux.svg" alt="Серволюкс" loading="lazy"></span><span><img src="img/partners/inkofood.png" alt="Инко-Фуд" loading="lazy"></span><span><img src="img/partners/ganna.svg" alt="Ганна" loading="lazy"></span><span><img src="img/partners/myasanat.jpg" alt="Мясанат" loading="lazy"></span><span class="txt">Бел-Морис</span>
     </div>
   </div>
 </div>
